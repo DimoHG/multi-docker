@@ -13,7 +13,7 @@ after_success:
   - docker build -t dimohg/multi-server ./server
   - docker build -t dimohg/multi-worker ./worker
 # log in to docker hub
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --pasword-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 # push to docker hub
   - docker push dimohg/multi-client
   - docker push dimohg/multi-nginx
